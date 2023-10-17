@@ -6,7 +6,9 @@ const ViewUrlComponent = () => {
 
   useEffect(() => {
     const fetchUrlAndSetUrl = async () => {
-      const result = await axios.get("http://localhost:5000/all");
+      const result = await axios.get(
+        "https://url-shortener-backend-lake.vercel.app/all"
+      );
       setUrls(result.data.urls);
     };
     fetchUrlAndSetUrl();

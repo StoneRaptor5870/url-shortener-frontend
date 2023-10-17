@@ -13,7 +13,9 @@ const AddUrlComponent = () => {
     }
 
     axios
-      .post("http://localhost:5000/short", { originalUrl: url })
+      .post("https://url-shortener-backend-lake.vercel.app/short", {
+        originalUrl: url,
+      })
       .then((res) => {
         console.log(res.data);
       })
